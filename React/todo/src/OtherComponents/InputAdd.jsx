@@ -13,7 +13,11 @@ export const InputAdd = (props) => {
     if (item.length === 0) {
       return;
     }
-    setArray([...array, { item: item }]);
+    setArray({
+      item: item,
+      id: (Math.random() * 1000).toString(),
+      checked: false,
+    });
     props.arrayOfElements(array);
     AddItem("");
   };
