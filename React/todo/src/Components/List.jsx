@@ -7,6 +7,7 @@ export const List = () => {
   const [item, setItem] = useState([]);
   const arrayOfTodo = (obj) => {
     setItem((prevValue) => [...prevValue, obj]);
+    console.log(obj);
   };
 
   const removeTodo = (index) => {
@@ -14,6 +15,8 @@ export const List = () => {
     newTodos.splice(index, 1);
     setItem(newTodos);
   };
+
+  
 
   const compliteTodo = (id) => {
     item.map((item) => {
@@ -54,7 +57,7 @@ export const List = () => {
     const oneChange = w.length;
     return (spanOne.textContent = `${oneChange}`);
   };
-  
+
   const progressBar = () => {
     const checkProgress = item.filter((del) => del.checked === true);
     const allItems = item.length;

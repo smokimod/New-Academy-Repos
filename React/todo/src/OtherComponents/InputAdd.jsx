@@ -3,7 +3,7 @@ import "./OtherStyles.css";
 
 export const InputAdd = (props) => {
   const [item, AddItem] = useState("");
-  const [array, setArray] = useState([]);
+  // const [array, setArray] = useState([]);
 
   const addElement = (e) => {
     AddItem(e.target.value);
@@ -13,12 +13,12 @@ export const InputAdd = (props) => {
     if (item.length === 0) {
       return;
     }
-    setArray({
+
+    props.arrayOfElements({
       item: item,
       id: (Math.random() * 1000).toString(),
       checked: false,
     });
-    props.arrayOfElements(array);
     AddItem("");
   };
 
