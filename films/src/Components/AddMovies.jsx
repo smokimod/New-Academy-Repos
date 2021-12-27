@@ -22,7 +22,9 @@ export const AddMovies = (props) => {
                   Details
                 </button>
               </Link>
-              <button>Favorite</button>
+              <button onClick={() => props.addFavoriteMovie(item)}>
+                Favorite
+              </button>
             </div>
           </div>
         ))}

@@ -12,6 +12,7 @@ export const MainComp = () => {
   const [btn, setBtn] = useState([]);
   const [type, AddType] = useState("");
   const [sort, setSort] = useState("");
+  const [favorite, setFavorite] = useState([]);
 
   const addElement = (e) => {
     AddValue(e.target.value);
@@ -27,6 +28,10 @@ export const MainComp = () => {
 
   const addSort = (e) => {
     setSort(e.target.value);
+  };
+  const addFavoriteMovie = (movie) => {
+    const addFavorite = [...favorite, movie];
+    setFavorite(addFavorite);
   };
 
   const searchMovies = async (page) => {
@@ -67,7 +72,7 @@ export const MainComp = () => {
       alert("Фильм не найден");
     }
   };
-  console.log(sort);
+  console.log(favorite);
 
   return (
     <div className="main_block">
@@ -80,7 +85,7 @@ export const MainComp = () => {
       />
       <div className="container">
         <div className="films">
-          <AddMovies movies={array} />
+          <AddMovies movies={array} addFavoriteMovie={addFavoriteMovie} />
         </div>
         <div className="buttoms">
           <Buttons btn={btn} pageTarget={pageTarget} />
