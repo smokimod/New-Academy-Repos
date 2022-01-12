@@ -16,8 +16,6 @@ export const List = () => {
     setItem(newTodos);
   };
 
-  
-
   const compliteTodo = (id) => {
     item.map((item) => {
       if (item.id === id) {
