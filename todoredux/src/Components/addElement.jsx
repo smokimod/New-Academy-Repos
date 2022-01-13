@@ -66,13 +66,10 @@ export const AddElement = () => {
             onClick={() => compliteTodo(item)}
           />
           <li className="todo_item">{item.valueofTodo}</li>
-          <button className="edt" id={item.editID} onClick={editTodo}>
+          <button className="edt" onClick={editTodo}>
             Edit
           </button>
-          <button
-            className="btn"
-            id={item.deleteId}
-            onClick={() => removeTodo(item)}>
+          <button className="btn" onClick={() => removeTodo(item)}>
             Delete
           </button>
         </div>
