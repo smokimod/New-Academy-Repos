@@ -17,8 +17,6 @@ export const Forma = () => {
     const params = {
       id: Math.random() * 1000,
       checkId: Math.random() * 1000,
-      deleteId: Math.random() * 1000,
-      editID: Math.random() * 1000,
       isChecked: false,
       valueofTodo: value,
     };
